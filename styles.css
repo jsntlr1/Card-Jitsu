@@ -1,0 +1,354 @@
+:root {
+    --card-height: calc(var(--card-width) * 3/2);
+    --card-width: 66px;
+}
+
+@font-face {
+    font-family: 'Candombe';
+    src: url('') format('opentype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Burbank';
+    src: url('') format('opentype');
+    font-display: swap;
+}
+
+body {
+    font-family: 'Burbank', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2c1e0f;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://supercpps.com/novedades/wp-content/uploads/2020/07/sensei-volcano.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#game-container {
+    background-color: rgba(44, 20, 30, 0.6);
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    width: 88%;
+    min-width: 700px;
+    max-width: 1250px;
+    position: relative;
+}
+
+#score-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-area {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.card-slot {
+    width: 120px;
+    height: 180px;
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.card-expanded {
+    margin: 0 !important;
+    width: 120px !important;
+    height: 180px !important;
+    transition: width 0.3s, height 0.3s;
+}
+
+#player-hand,
+#enemy-hand {
+    display: flex;
+    justify-content: flex-start;
+    width: 45%;
+}
+
+#enemy-hand {
+    justify-content: flex-end;
+}
+
+.card {
+    width: var(--card-width);
+    height: var(--card-height);
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.card-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-image: url('https://howlongtobeat.com/games/21881_Club_Penguin_Elite_Penguin_Force.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-header {
+    top: 0px;
+    left: 0px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    border-right: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+    border-bottom-right-radius: 10px;
+    align-items: center;
+    width: 25%;
+    height: 40%;
+}
+
+.card-element {
+    width: 90%;
+    height: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+}
+
+.card-expanded:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.card-value {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.card-slot .card-expanded .card-content .card-header .card-value #card-text {
+    font-size: 26px !important;
+}
+
+#card-text {
+    font-family: 'Burbank', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: white 0.3px;
+}
+
+.power-card {
+    animation: chromatic-glow 2s linear infinite;
+}
+
+
+
+@keyframes chromatic-glow {
+    0% {
+        box-shadow: 0 0 10px 5px rgba(255, 212, 212, 0.7);
+    }
+
+    25% {
+        box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.7);
+    }
+
+    75% {
+        box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 10px 5px rgba(255, 232, 232, 0.7);
+    }
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#restartButton {
+    box-shadow: inset 0px 1px 0px 0px #fff6af;
+    background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    background-color: #ffec64;
+    border-radius: 6px;
+    border: 1px solid #ffaa22;
+    display: inline-block;
+    cursor: pointer;
+    color: #333333;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Burbank', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 7px 24px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #ffee66;
+}
+
+#restartButton:hover {
+    background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color: #ffab23;
+}
+
+#restartButton:active {
+    position: relative;
+    top: 1px;
+}
+
+
+#timer {
+    font-size: 24px;
+    color: #ffd700;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#create-card-icon {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/2072/2072130.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#create-card-menu {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(44, 30, 15, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.floating-belt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-image: url('https://static.wikia.nocookie.net/club-penguin-rewritten/images/f/f0/White_Ninja_Belt.png/revision/latest?cb=20170407214239');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: float 3s ease-in-out infinite;
+    z-index: 10;
+    display: none;
+}
+
+.floating-belt.visible {
+    display: block;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%);
+    }
+
+    50% {
+        transform: translate(-50%, calc(-50% - 10px));
+        /* Adjust for desired float height */
+    }
+}
+
+#create-card-menu input,
+#create-card-menu select,
+#create-card-menu button {
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --card-height: calc(var(--card-width) * 3/2);
+        --card-width: 60px;
+    }
+
+    #game-container {
+        padding: 15px;
+        min-width: 600px;
+    }
+
+    #score-bar {
+        font-size: 18px;
+    }
+
+    .card-slot {
+        font-size: 10px;
+    }
+
+    .card {
+        width: var(--card-width);
+        height: var(--card-height);
+    }
+
+    #result {
+        font-size: 24px;
+    }
+}
