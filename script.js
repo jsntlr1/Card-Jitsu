@@ -2,22 +2,22 @@ const elements = ['fire', 'water', 'ice'];
 const belts = ['none', 'white', 'yellow', 'orange', 'green', 'blue', 'red', 'purple', 'brown', 'black'];
 const cardColors = ['#FF0000', '#90D5FF', '#FFD700', '#008000', '#FFA500', '#CC8899', '#FF9CCE'];
 const elementImages = {
-    fire: 'https://static.wikia.nocookie.net/officialclubpenguinonline/images/f/f2/CJ_fire_icon.png/revision/latest?cb=20191006193940',
-    water: 'https://static.wikia.nocookie.net/officialclubpenguinonline/images/6/64/CJ_water_icon.png/revision/latest/scale-to-width-down/1000?cb=20191006194411',
-    ice: 'https://static.wikia.nocookie.net/officialclubpenguinonline/images/5/51/CJ_snow_icon.png/revision/latest?cb=20191006194358',
-    back: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj0ByzAfm5BjDJOc1YHpblqHbwk7dAvw6ksQ&s'
+    fire: 'assets/elements/fire.png',
+    water: 'assets/elements/water.png',
+    ice: 'assets/elements/ice.png',
+    back: 'assets/backgrounds/default.png'
 };
 const beltImages = {
     'none': '',
-    'white': 'https://static.wikia.nocookie.net/club-penguin-rewritten/images/f/f0/White_Ninja_Belt.png/revision/latest?cb=20170407214239',
-    'yellow': 'https://static.wikia.nocookie.net/officialclubpenguinonline/images/f/f0/Yellow_Ninja_Belt_icon-0.png/revision/latest/scale-to-width-down/1000?cb=20190103093151',
-    'orange': 'https://static.wikia.nocookie.net/officialclubpenguinonline/images/c/c4/Orange_Ninja_Belt_icon-0.png/revision/latest/scale-to-width-down/1000?cb=20190103093814',
-    'green': 'https://static.wikia.nocookie.net/officialclubpenguinonline/images/b/b0/Green_Ninja_Belt_icon-0.png/revision/latest/scale-to-width-down/1000?cb=20190103094325',
-    'blue': 'https://static.wikia.nocookie.net/officialclubpenguinonline/images/c/c2/Blue_Ninja_Belt_icon-0.png/revision/latest/scale-to-width-down/1000?cb=20190103094951',
-    'red': 'https://static.wikia.nocookie.net/officialclubpenguinonline/images/3/3d/Red_Ninja_Belt_icon-0.png/revision/latest/scale-to-width-down/1000?cb=20190103095524',
-    'purple': 'https://static.wikia.nocookie.net/officialclubpenguinonline/images/f/f0/Purple_Ninja_Belt_icon-0.png/revision/latest/scale-to-width-down/1000?cb=20190103100148',
-    'brown': 'https://static.wikia.nocookie.net/officialclubpenguinonline/images/c/c0/Brown_Ninja_Belt_icon-0.png/revision/latest/scale-to-width-down/1000?cb=20190103100444',
-    'black': 'https://static.wikia.nocookie.net/officialclubpenguinonline/images/3/38/Black_Ninja_Belt_icon-0.png/revision/latest/scale-to-width-down/1000?cb=20190103100720'
+    'white': 'assets/belts/white.png',
+    'yellow': 'assets/belts/yellow.png',
+    'orange': 'assets/belts/orange.png',
+    'green': 'assets/belts/green.png',
+    'blue': 'assets/belts/blue.png',
+    'red': 'assets/belts/red.png',
+    'purple': 'assets/belts/purple.png',
+    'brown': 'assets/belts/brown.png',
+    'black': 'assets/belts/black.png'
 };
 const cardBackgrounds = [
     'https://static.wikia.nocookie.net/clubpenguin/images/9/9a/Yarr_card_image.png',
