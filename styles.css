@@ -5,13 +5,13 @@
 
 @font-face {
     font-family: 'Candombe';
-    src: url('') format('opentype');
+    src: url('fonts/Candombe Regular/Candombe Regular.otf') format('opentype');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Burbank';
-    src: url('') format('opentype');
+    src: url('fonts/Burbank Big Condensed Font.otf') format('opentype');
     font-display: swap;
 }
 
