@@ -2,22 +2,22 @@ const elements = ['fire', 'water', 'ice'];
 const belts = ['none', 'white', 'yellow', 'orange', 'green', 'blue', 'red', 'purple', 'brown', 'black'];
 const cardColors = ['#FF0000', '#90D5FF', '#FFD700', '#008000', '#FFA500', '#CC8899', '#FF9CCE'];
 const elementImages = {
-    fire: 'assets/elements/fire.png',
-    water: 'assets/elements/water.png',
-    ice: 'assets/elements/ice.png',
-    back: 'assets/backgrounds/default.png'
+    fire: './assets/elements/fire.png',
+    water: './assets/elements/water.png',
+    ice: './assets/elements/ice.png',
+    back: './assets/backgrounds/default.png'
 };
 const beltImages = {
     'none': '',
-    'white': 'assets/belts/white.png',
-    'yellow': 'assets/belts/yellow.png',
-    'orange': 'assets/belts/orange.png',
-    'green': 'assets/belts/green.png',
-    'blue': 'assets/belts/blue.png',
-    'red': 'assets/belts/red.png',
-    'purple': 'assets/belts/purple.png',
-    'brown': 'assets/belts/brown.png',
-    'black': 'assets/belts/black.png'
+    'white': './assets/belts/white.png',
+    'yellow': './assets/belts/yellow.png',
+    'orange': './assets/belts/orange.png',
+    'green': './assets/belts/green.png',
+    'blue': './assets/belts/blue.png',
+    'red': './assets/belts/red.png',
+    'purple': './assets/belts/purple.png',
+    'brown': './assets/belts/brown.png',
+    'black': './assets/belts/black.png'
 };
 const cardBackgrounds = [
     'https://static.wikia.nocookie.net/clubpenguin/images/9/9a/Yarr_card_image.png',
